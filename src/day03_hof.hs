@@ -11,8 +11,8 @@ quicksort (h:t) = quicksort (filter (<h) t) ++ [h] ++ quicksort (filter (>=h) t)
 collatz :: (Integral a ) => a -> [a]
 collatz 1 = [1]
 collatz x 
-	| odd x = x : collatz (x*3 + 1)
-	| even x = x : collatz ( div x 2 )
+    | odd x = x : collatz (x*3 + 1)
+    | even x = x : collatz ( div x 2 )
 
 -- Elem function implemented with left folding
 elem' :: (Eq a) => a -> [a] -> Bool
